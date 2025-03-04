@@ -1,1 +1,87 @@
+String Methods
+Let's consider a string:
+let myString = "Hello, World!";
 
+Here are some JavaScript string methods applied to this string:
+1. toUpperCase()
+console.log(myString.toUpperCase()); // Output: "HELLO, WORLD!"
+
+2. toLowerCase()
+console.log(myString.toLowerCase()); // Output: "hello, world!"
+
+3. trim()
+let trimmedString = "   Hello, World!   ";
+console.log(trimmedString.trim()); // Output: "Hello, World!"
+
+4. split()
+let splitString = myString.split(",");
+console.log(splitString); // Output: ["Hello", " World!"]
+
+5. join()
+let joinedString = ["Hello", "World"].join(", ");
+console.log(joinedString); // Output: "Hello, World"
+
+6. replace()
+let replacedString = myString.replace("World", "Universe");
+console.log(replacedString); // Output: "Hello, Universe!"
+
+7. includes()
+console.log(myString.includes("World")); // Output: true
+
+8. indexOf()
+console.log(myString.indexOf("World")); // Output: 7
+
+9. substring()
+console.log(myString.substring(0, 5)); // Output: "Hello"
+
+Array Methods
+Let's consider an array:
+let myArray = [1, 2, 3, 4, 5];
+Here are some JavaScript array methods applied to this array:
+
+1. push()
+myArray.push(6);
+console.log(myArray); // Output: [1, 2, 3, 4, 5, 6]
+
+2. pop()
+let poppedElement = myArray.pop();
+console.log(poppedElement); // Output: 6
+console.log(myArray); // Output: [1, 2, 3, 4, 5]
+
+3. shift()
+let shiftedElement = myArray.shift();
+console.log(shiftedElement); // Output: 1
+console.log(myArray); // Output: [2, 3, 4, 5]
+
+4. unshift()
+myArray.unshift(0);
+console.log(myArray); // Output: [0, 2, 3, 4, 5]
+
+5. splice()
+myArray.splice(2, 0, 2.5);
+console.log(myArray); // Output: [0, 2, 2.5, 3, 4, 5]
+
+6. slice()
+let slicedArray = myArray.slice(1, 4);
+console.log(slicedArray); // Output: [2, 2.5, 3]
+
+7. concat()
+let concatenatedArray = myArray.concat([6, 7, 8]);
+console.log(concatenatedArray); // Output: [0, 2, 2.5, 3, 4, 5, 6, 7, 8]
+
+8. forEach()
+myArray.forEach((element, index) => {
+  console.log(`Element at index ${index}: ${element}`);
+});
+
+9. map()
+let mappedArray = myArray.map((element) => element * 2);
+console.log(mappedArray); // Output: [0, 4, 5, 6, 8, 10]
+
+10. filter()
+let filteredArray = myArray.filter((element) => element > 3);
+console.log(filteredArray); // Output: [4, 5]
+
+11. reduce()
+let reducedValue = myArray.reduce((accumulator, element) => accumulator + element, 0);
+console.log(reducedValue); // Output: 25
